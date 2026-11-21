@@ -21,7 +21,7 @@ PICS = (environ.get('PICS', 'https://graph.org/file/IMG_20261117_191726_667.jpg'
 
 
 # Admins & Users
-ADMINS = [int(8097361754) if id_pattern.search(admin) else admin for admin in environ.get('8097361754', '').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(8097361754) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '8097361754').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
@@ -37,7 +37,7 @@ REQUEST_TO_JOIN_MODE = bool(environ.get('-1004417947951', False)) # Set True Or 
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', False)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
 
 # This Is Force Subscribe Channel, also known as Auth Channel 
-auth_channel = environ.get('-1003972416962', '') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('Autu_channel', '-1004417947951') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # This Channel Is For When User Request Any File Name With command or hashtag like - /request or #request
